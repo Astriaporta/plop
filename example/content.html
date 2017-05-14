@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test popup</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="plop.css">
+    <style media="screen">
+        .btn {
+            border: 0;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 0 6px;
+            min-height: 36px;
+            min-width: 88px;
+            outline: none;
+            font-size: 1.1em;
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .btn-prymary {
+            background-color: rgb(16, 108, 200);
+            color: rgba(255, 255, 255, 0.87);
+        }
+    </style>
+</head>
+<body>
+
+<button id="myBtn" class="btn btn-prymary">Open Modal</button>
+
+<script src="plop.js"></script>
+<script>
+    var btn = document.getElementById("myBtn");
+
+    btn.onclick = function () {
+        Plop.show({content: "Space invaders are comming ...", width: 300, height: 300, overlay: true, btnClose: true, alphaOverlay:0.7});
+    }
+</script>
+</body>
+</html>
